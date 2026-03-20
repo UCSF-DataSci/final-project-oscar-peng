@@ -1,0 +1,8 @@
+{
+  "total_questions": 20,
+  "rag_correct": 5,
+  "rag_accuracy": 0.25,
+  "base_correct": 19,
+  "base_accuracy": 0.95,
+  "improvement": -14
+}

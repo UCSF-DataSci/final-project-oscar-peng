@@ -1,0 +1,24 @@
+question_num,correct_answer,rag_answer,rag_correct,base_answer,base_correct,rag_response,base_response
+1,d,?,False,d,True,,"d – Targeting surface adhesins with antibody‑like molecules prevents Streptococcus mutans from adhering to enamel and forming plaque, directly addressing the Gram‑positive, acid‑producing bacteria tha"
+2,d,?,False,d,True,,"d) Gram-positive cells retainthe crystal violet-iodine complex during decolorization, whereas Gram-negative cells lose it, producing the differential staining result."
+3,b,b,True,b,True,"b. Coagulase positivity is a definitive test for Staphylococcus aureus, distinguishing it from coagulase-negative staphylococci such as S. epidermidis.",b – Coagulase positivity is adefinitive test that distinguishes Staphylococcus aureus from other coagulase‑negative staphylococci.
+4,c,?,False,c,True,,"c) Transformationis the uptake of free extracellular DNA by competent bacterial cells, allowing incorporation of that DNA into the genome."
+5,b,?,False,b,True,,b – T helper cellsrecognize peptide‑MHC II complexes displayed on B cells (which act as antigen‑presenting cells) to provide help for B‑cell activation and antibody production.
+6,a,?,False,?,False,,"a: This patientencountered this organism recently – an elevated IgM/IgG ratio reflects the early, primary antibody response where IgM predominates before class switching to IgG occurs."
+7,d,d,True,d,True,"d – The mouselacks functional TLR5, so dendritic cells cannot be activated by flagellin to provide the necessary co‑stimulatory signals and cytokines for T‑cell help. B cells can still bind flagellin ","d) B cells recognizeflagellin but do not receive T cell help. Without functional TLR5, dendritic cells are not properly activated, leading to inadequate co‑stimulation and cytokine production, which i"
+8,c,c,True,c,True,"c
+The complement system's major mechanism for controlling bacterial infections is the formation of the membrane attack complex (MAC), which inserts pores into the bacterial cell membrane, leading to l","c) The complement system forms the membrane attack complex (MAC), which inserts pores into bacterial membranes, leading to osmotic lysis and cell death."
+9,b,?,False,b,True,,"b - Dendritic cells endocytose antigens, process them into peptides, and present via MHC class II to helper T cells in the lymph nodes."
+10,d,d,True,d,True,"d
+The correct answer is(d) have target specificity and enzymatic activity that modifies host cell proteins, changing their function, as stated in the practice exam question and supporting lecture mate","d) AB toxins consist ofa binding (B) subunit that confers target specificity and an active (A) subunit that possesses enzymatic activity, which modifies host cell proteins (e.g., by ADP‑ribosylation) "
+11,c,?,False,c,True,,"c Expression of CD40 ligand (CD40L) on T helper cells binds CD40 on B cells, providing the critical signal needed for B‑cell activation, proliferation, and class‑switch recombination in a T‑dependent "
+12,c,c,True,c,True,"c) Performing hand hygiene after handling medical equipment in the client-care area is a standard precaution to prevent disease transmission, as indicated in the practice exam answer key.",c Performing hand hygiene after handlingmedical equipment in the client-care area is a core standard precaution to prevent the transfer of pathogens.
+13,a,?,False,a,True,,"a) Activatesmacrophages leading to overproduction of pro‑inflammatory cytokines, which drives septic shock."
+14,c,?,False,c,True,,"c) Antibodiesneutralize bacterial toxins. This is a key function of humoral (antibody‑mediated) immunity, where antibodies bind to toxins and prevent them from interacting with host cells."
+15,b,?,False,b,True,,"b)Clonal selection refers to the process where an antigen binds to a B cell whose receptor matches that antigen, triggering the selected B cell to proliferate and produce a clone of cells all expressi"
+16,c,?,False,c,True,,"c) IgE –The rapid onset of respiratory distress and loss of consciousness after a bee sting is characteristic of anaphylaxis, which is driven by IgE‑mediated mast cell degranulation."
+17,c,?,False,c,True,,"c – Nosocomial(hospital‑acquired) Staphylococcus infections are more likely to exhibit drug resistance, which influences treatment choices and infection control measures."
+18,d,?,False,d,True,,"d
+Self-reactive B cells that bind self antigen without receiving T cell help become anergic, a key peripheral tolerance mechanism."
+19,c,?,False,c,True,,"c Hydrogen peroxide-based antisepticgel is a safe oral antiseptic that can inhibit bacterial regrowth after incision and drainage, whereas high‑ or intermediate‑level disinfectant salves are too toxic"
+20,c,?,False,c,True,,"c) Dendritic cells are professional antigen‑presenting cells that capture antigens, process them into peptides, display these peptides on MHC molecules, and provide co‑stimulatory surface signals requ"
