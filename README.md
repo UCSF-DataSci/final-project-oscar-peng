@@ -100,13 +100,13 @@ See `requirements.txt` for the full list.
 
 **Page-grouped chunking (not token-based):** Lecture slides have sparse text (~300 chars/page). We group 2 consecutive pages per chunk to create retrieval units with enough context. This is simpler than token-based chunking and works well for slide decks.
 
-**No image captioning:** Lecture slides contain many diagrams and images. We chose to skip image captioning (BLIP/LLaVA) to keep scope manageable for a 2-3 week project. The text content from slides provides sufficient coverage, and the answer key metadata (lecture source + objective) compensates for missing visual content. This is a clear limitation — a production system would need multimodal support.
+**No image captioning:** Lecture slides contain many diagrams and images. We chose to skip image captioning (BLIP/LLaVA) to keep scope manageable for a 2-3 week project. The text content from slides provides sufficient coverage, and the answer key metadata (lecture source + objective) compensates for missing visual content. This is a clear limitation; a production system would need multimodal support.
 
 **Nemotron 3 Super (free) via OpenRouter:** Originally planned for gpt-4o-mini, but switched to `nvidia/nemotron-3-super-120b-a12b:free` to avoid API costs. This introduced rate limiting challenges (documented in Notebook 03) but kept the project zero-cost. A production system would use a paid model for better reliability.
 
-**Evaluation scope (20 of 51 questions):** The free-tier Nemotron model enforced strict rate limits (~10 requests/minute). After implementing retry logic with exponential backoff, we successfully evaluated 20 questions before rate limits became prohibitive. This is documented as a trade-off — the 20-question sample covers the full range of topics and provides a meaningful comparison.
+**Evaluation scope (20 of 51 questions):** The free-tier Nemotron model enforced strict rate limits (~10 requests/minute). After implementing retry logic with exponential backoff, we successfully evaluated 20 questions before rate limits became prohibitive. This is documented as a trade-off; the 20-question sample covers the full range of topics and provides a meaningful comparison.
 
-**Structured answer extraction:** We use regex to extract answer letters from model responses. This is brittle for verbose RAG responses — a more robust approach would use structured output (Pydantic models via `output_type`). This limitation affected 15/20 RAG evaluation scores and is the primary future improvement.
+**Structured answer extraction:** We use regex to extract answer letters from model responses. This is brittle for verbose RAG responses; a more robust approach would use structured output (Pydantic models via `output_type`). This limitation affected 15/20 RAG evaluation scores and is the primary future improvement.
 
 ## Example Output
 
@@ -143,13 +143,13 @@ Results from running 20 practice exam questions (Q1-Q20) through both systems. E
 | Base LLM | 19/20 | 95.0% | Strong general knowledge, no citations |
 | RAG Tutor | 5/20 | 25.0%* | 15 answers unparseable due to verbose responses |
 
-**\*Why the RAG score is misleading:** The RAG tutor gives rich, multi-paragraph answers with lecture citations and learning objectives (see Notebook 02 examples). The automated evaluation extracts only the first 200 characters of each response to find the answer letter — but the RAG agent buries the letter deep in its explanation. 15 of 20 RAG responses were marked "unparseable" (`?`) by the regex extractor, not incorrect.
+**\*Why the RAG score is misleading:** The RAG tutor gives rich, multi-paragraph answers with lecture citations and learning objectives (see Notebook 02 examples). The automated evaluation extracts only the first 200 characters of each response to find the answer letter, but the RAG agent buries the letter deep in its explanation. 15 of 20 RAG responses were marked "unparseable" (`?`) by the regex extractor, not incorrect.
 
-**The base LLM scores high** because gpt-4o-mini already knows general immunology from training data. However, it cannot cite course-specific sources, reference lecture slide numbers, or align answers to learning objectives — capabilities the RAG tutor demonstrates qualitatively in Notebook 02.
+**The base LLM scores high** because gpt-4o-mini already knows general immunology from training data. However, it cannot cite course-specific sources, reference lecture slide numbers, or align answers to learning objectives; capabilities the RAG tutor demonstrates qualitatively in Notebook 02.
 
 **Key takeaway:** The evaluation methodology (regex letter extraction) was insufficient for the RAG agent's verbose output style. A production system would use structured output (Pydantic models via `output_type`) to guarantee parseable responses. This is documented as a limitation and future improvement.
 
-*(Run Notebook 03 to regenerate these results — see `results/` directory for full data)*
+*(Run Notebook 03 to regenerate these results, see `results/` directory for full data)*
 
 ## Repository Structure
 
@@ -190,4 +190,4 @@ Results from running 20 practice exam questions (Q1-Q20) through both systems. E
 
 - **Multimodal support:** Add image captioning for lecture diagrams using a vision-language model
 - **Adaptive tutoring:** Track which topics the student struggles with and recommend review material
-- **UCSF ChatGPT Enterprise deployment:** This prototype validates features that could be deployed as a Custom GPT integrated with the dental curriculum via Canvas
+- **UCSF ChatGPT Enterprise deployment:** This prototype validates features that could be deployed as a Custom GPT integrated with the dental curriculum
